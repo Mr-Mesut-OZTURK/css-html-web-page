@@ -58,3 +58,33 @@ window.addEventListener("click", highLightMenu)
 
 
 
+// hide menu
+const hideMobileMenu = () => {
+    const menuBars = document.querySelector(".is-active")
+
+    if (window.innerWidth <= 786 && menuBars) {
+        menu.classList.toggle("is-active")
+        menuLinks.classList.remove("active")
+    }
+}
+menuLinks.addEventListener("click", hideMobileMenu)
+navLogo.addEventListener("click", hideMobileMenu)
+
+
+// getComputedStyle(document.documentElement).getPropertyValue('--dark');
+// document.documentElement.style.setProperty('--dark', 'pink');
+
+// var r = document.querySelector(':root');
+// var rs = getComputedStyle(r);
+// r.style.setProperty('--dark', 'lightblue');
+
+
+
+// chose theme color
+const r = document.querySelector(':root');
+const colors = ["#131313", "#24FE41", "#6E48AA", "#8CA6DB"]
+
+const changeColor = () => {
+    r.style.setProperty('--dark', colors[Math.floor(Math.random() * colors.length)]);
+}
+navLogo.addEventListener("click", changeColor)
