@@ -3,13 +3,12 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 70vh;
+    /* min-height: 70vh; */
     position: relative;
 }
 
 .section__1 > div {
     width: 100%;
-    min-height: 80vh;
+    min-height: 500px;
     background-color: rgba(255, 255, 255, 0.1);
-
 }
